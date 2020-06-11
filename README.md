@@ -1,9 +1,9 @@
 # Planana Web Development Project
 ### Meal planning web app (NOT FUNCTIONAL AS OF SEPTEMBER 2019 - Yummly API deprecated)
 
-Web development project for University of Bristol COMS32500 Web Technologies project.
+Web development project for University of Bristol COMS32500 Web Technologies project. Uses Yummly API to search for recipes (now deprecated).
 
-* Author: Angus Williams
+* Author: Angus Redlarski Williams
 * Github: @angusrw
 * Email: angusrwilliams@gmail.com
 * Co-contributors: Rachel Kirby (@rk16586), Bradley Horsewell (@bh15807)
