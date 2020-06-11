@@ -1,0 +1,57 @@
+ul {list-style-type: none;}
+
+/*-------------------------------------------------*/
+
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-image: url("/images/background3.jpg");
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: #1B3D35;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.menu {
+  display: block;
+  position: absolute;
+  margin: 0.5rem;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+/* .topnav a:hover {
+} */
+
+.topnav .icon {
+  width: 60px;
+  height: 60px;
+  vertical-align: middle;
+}
+
+.topnav .logo {
+  max-width: 100px;
+  max-height: 80px;
+  width: auto;
+  padding: 0.5rem;
+  display: block;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  text-decoration: underline;
+}

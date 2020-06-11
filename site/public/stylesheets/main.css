@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+ul {list-style-type: none;}
+
+body, html {
+  font-family:'Lato', sans-serif, Helvetica;
+  width: 100%;
+  height:100%;
+  margin:0;
+  line-height:1.5;
+  color: black;
+}
+
+main {
+  margin: 3em;
+}
+
+h1{
+  color: #1B3D35;
+  font-size: 20pt;
+}
+
+h2{
+  color: black;
+  font-size: 12pt;
+  font-weight: normal;
+}
+
+p{
+  color: black;
+  font-size: 12pt;
+}
+
+button {
+  z-index: 1;
+  font-size: inherit;
+  font-family: inherit;
+  background-color: #ffffce;
+  color: black;
+  padding: 4px 4px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+    button:hover {
+      cursor: pointer;
+      animation: jelly 0.5s;
+    }
+    @keyframes jelly {
+      0%,
+      100% {
+        transform: scale(1, 1);
+      }
+      25% {
+        transform: scale(0.9, 1.1);
+      }
+      50% {
+        transform: scale(1.1, 0.9);
+      }
+      75% {
+        transform: scale(0.95, 1.05);
+      }
+    }

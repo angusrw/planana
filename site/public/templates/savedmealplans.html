@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB">
+
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/main.css"/>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/navbar.css"/>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/savedmealplans.css"/>
+        <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+        <title>Saved Meal Plans</title>
+    </head>
+
+    <body>
+      <nav class="topnav">
+        <img src="images/banana.gif" width="100" height="80" class="logo"/>
+        <!-- Navigation links (hidden by default) -->
+        <section id="myLinks">
+          <a href="searchrecipes" class="active">
+            <img class="icon" src="../images/search.svg"/>
+            Find Recipes
+          </a>
+          <a href="createweekplan">
+            <img class="icon" src="../images/new.svg"/>
+            Create a Plan
+          </a>
+          <a href="savedmealplans">
+            <img class="icon" src="../images/save.svg"/>
+            Your Saved Plans
+          </a>
+          <a href="landing">
+            <img class="icon" src="../images/logout.svg"/>
+            Logout
+          </a>
+        </section>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="menu" id="burger">
+          <img src="../images/burger3.svg"/>
+        </a>
+      </nav>
+
+      <main>
+        <header class="title">
+            <h1>Your Saved Weekly Meal Plans:</h1>
+        </header>
+
+        <section class = "planoptions">
+            <p id="num"></p>
+            <div id="root"></div>
+        </section>
+      </main>
+
+        <!--Table stores choices made for each meal-->
+        <aside id="plan" class="overlay">
+            <!-- Button to close the overlay navigation -->
+            <table id="weeklyMeals">
+               <tr>
+                    <th> </th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+               </tr>
+               <tr>
+                    <th>Breakfast</th>
+                    <td><section class="mealStore" id="monbreak"></section></td>
+                    <td><section class="mealStore" id="tuebreak"></section></td>
+                    <td><section class="mealStore" id="wedbreak"></section></td>
+                    <td><section class="mealStore" id="thurbreak"></section></td>
+                    <td><section class="mealStore" id="fribreak"></section></td>
+                    <td><section class="mealStore" id="satbreak"></section></td>
+                    <td><section class="mealStore" id="sunbreak"></section></td>
+               </tr>
+               <tr>
+                    <th>Lunch</th>
+                    <td><section class="mealStore" id="monlun"></section></td>
+                    <td><section class="mealStore" id="tuelun"></section></td>
+                    <td><section class="mealStore" id="wedlun"></section></td>
+                    <td><section class="mealStore" id="thurlun"></section></td>
+                    <td><section class="mealStore" id="frilun"></section></td>
+                    <td><section class="mealStore" id="satlun"></section></td>
+                    <td><section class="mealStore" id="sunlun"></section></td>
+              </tr>
+              <tr>
+                    <th>Dinner</th>
+                    <td><section class="mealStore" id="mondin"></section></td>
+                    <td><section class="mealStore" id="tuedin"></section></td>
+                    <td><section class="mealStore" id="weddin"></section></td>
+                    <td><section class="mealStore" id="thurdin"></section></td>
+                    <td><section class="mealStore" id="fridin"></section></td>
+                    <td><section class="mealStore" id="satdin"></section></td>
+                    <td><section class="mealStore" id="sundin"></section></td>
+              </tr>
+            </table>
+            <section class="planbuttons">
+              <button id="exportbtn">Export</button>
+              <button id="closebtn">Back</button>
+            </section>
+        </aside>
+
+      <script src="/scripts/savedmealplansSCRIPT.js"></script>
+      <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+      <script src="/scripts/navbar.js"></script>
+    </body>
+</html>

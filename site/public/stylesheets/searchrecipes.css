@@ -1,0 +1,128 @@
+ul {list-style-type: none;}
+
+/* SEARCH BUTTON: */
+#search{
+  padding-left: 20px;
+}
+
+input[type=text] {
+  width: 250px;
+  align: left;
+  box-sizing: border-box;
+  border: 2px solid #333333;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 10px 10px 10px 10px;
+}
+
+input[type=submit] {
+  width: 80px;
+  height: 44px;
+  border: 4px solid #ff45c;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.mealoptions{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  padding: 10px;
+}
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  margin: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+    .card:hover {
+      box-shadow: 0 15px 20px 0 rgba(0,0,0,0.3);
+    }
+    .cardtxt{
+      vertical-align: middle;
+      text-align: center;
+      display: inline-block;
+      padding: 4px 4px;
+    }
+    .thumb {
+      margin: 10px;
+      border-radius: 50%;
+      display: block;
+      max-width:100px;
+      max-height:100px;
+      width: auto;
+      height: auto;
+    }
+    .rating{
+      margin: 10px;
+      height: 48px;
+      width: auto;
+      margin: 10px;
+      padding: 10px 10px;
+      text-align: center;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    @media screen and (min-width: 600px) {
+      .card {
+        flex: 1 1;
+    /*    calc(50% - 2rem);*/
+      }
+    }
+    @media screen and (min-width: 900px) {
+      .card {
+        flex: 1 1;
+    /*    calc(33% - 2rem);*/
+      }
+    }
+
+    .cardtxt {
+      position: relative;
+      z-index: 1;
+      text-decoration: none;
+      color: black;
+    }
+        .cardtxt::before {
+          content: '';
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          bottom: 0;
+          left: -0.25em;
+          right: -0.25em;
+          background-color: #f1efff;
+          border-radius: 5px;
+          transform-origin: center right;
+          transform: scaleX(0);
+          transition: transform 0.2s ease-in-out;
+        }
+        .cardtxt:hover::before {
+          transform: scaleX(1);
+          transform-origin: center left;
+        }

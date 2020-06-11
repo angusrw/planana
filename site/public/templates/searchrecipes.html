@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB">
+
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/main.css"/>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/navbar.css"/>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/searchrecipes.css"/>
+        <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+        <title>Search Recipes</title>
+    </head>
+
+    <body>
+      <nav class="topnav">
+        <img src="images/banana.gif" width="100" height="80" class="logo"/>
+        <!-- Navigation links (hidden by default) -->
+        <section id="myLinks">
+          <a href="searchrecipes" class="active">
+            <img class="icon" src="../images/search.svg"/>
+            Find Recipes
+          </a>
+          <a href="createweekplan">
+            <img class="icon" src="../images/new.svg"/>
+            Create a Plan
+          </a>
+          <a href="savedmealplans">
+            <img class="icon" src="../images/save.svg"/>
+            Your Saved Plans
+          </a>
+          <a href="landing">
+            <img class="icon" src="../images/logout.svg"/>
+            Logout
+          </a>
+        </section>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="menu" id="burger">
+          <img src="../images/burger3.svg"/>
+        </a>
+      </nav>
+
+        <main>
+            <header>
+              <h1>Search for recipes!</h1>
+              <p>Search a meal or ingredient, and click 'save' to the save the meal.</p>
+            </header>
+
+            <form id="search">
+                <input type="text" placeholder="Search for a meal..." name="q"/>
+                <input type="submit" value="Submit"/>
+            </form>
+
+            <section class = "mealoptions">
+                <p id="num"></p>
+                <div id="root"></div>
+            </section>
+        </main>
+
+        <script src="/scripts/searchrecipesSCRIPT.js"></script>
+        <script src="/scripts/navbar.js"></script>
+    </body>
+</html>

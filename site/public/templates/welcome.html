@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Planana</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/welcome.css"/>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <title>Welcome to Planana</title>
+  </head>
+
+  <body>
+
+    <main class="container">
+      <section class="split signup">
+        <h1>Join Us!</h1>
+        <a class="button">Sign Up</a>
+      </section>
+
+      <section class="split login">
+        <h1>Already joined?</h1>
+        <a class="button">Log In</a>
+      </section>
+    </main>
+
+      <section class="popup" id="popup-login">
+        <section class="popup-content zoom-animation">
+          <button class="closebtn"><img class="icon" width="20px" height="20px" src="../images/x.png"></img></button>
+          <img class="avatar" width="64px" height="64px" src="../images/login.svg" ></img>
+          <h2>Log In</h2>
+          <form id="login-form">
+              <input type="text" name="username" placeholder="Username" required>
+              <input type="password" name="password" placeholder="Password" required>
+              <input type="submit">
+          </form>
+        </section>
+      </section>
+
+      <section class="popup zoom-animation" id="popup-signup">
+        <section class="popup-content">
+          <button class="closebtn"><img class="icon" width="20px" height="20px" src="../images/x.png"></img></button>
+          <img class="avatar" width="64px" height="64px" src="../images/login.svg" ></img>
+          <h2>Sign Up</h2>
+          <form id="signup-form">
+             <input type="text" name="username" placeholder="Username" required>
+             <input type="password" name="password" placeholder="Password" required>
+             <input type="text" name="email" placeholder="Email" required>
+             <input type="submit">
+          </form>
+      </section>
+    </section>
+
+    <script src="/scripts/welcome.js"></script>
+
+    </body
+</html>

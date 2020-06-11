@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+ul {list-style-type: none;}
+
+:root {
+  --container-bg-color: #333;
+  --signup-bg-color: rgba(29,104,107, 0.6);
+  --signup-button-hover-color: rgba(161, 11, 11, 0.3);
+  --login-bg-color: rgba(87, 83, 128, 0.6);
+  --login-button-hover-color: rgba(92, 92, 92, 0.3);
+  --hover-width: 75%;
+  --other-width: 25%;
+  --speed: 1000ms;
+}
+
+html, body {
+  padding:0;
+  margin:0;
+  font-family:'Lato', sans-serif, Helvetica;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 5rem;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  color: #fff;
+}
+
+a {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  height: 2.5rem;
+  padding-top: 1.3rem;
+  width: 15rem;
+  text-align: center;
+  color: #fff;
+  border-bottom: : #fff solid 0.2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transform: translateX(-50%);
+}
+
+a:hover {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 20%;
+  border-bottom: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--container-bg-color);
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split.signup {
+  left:0;
+  background-image: url("/images/background1.jpg");
+  background-size: cover;
+}
+
+.split.signup:before {
+  position:absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--signup-bg-color);
+}
+
+.split.login {
+  right:0;
+  background-image: url("/images/background4.jpg");
+  background-size: cover;
+}
+
+.split.login:before {
+  position:absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--login-bg-color);
+}
+
+.split.signup, .split.login, .split.login:before, .split.signup:before {
+  transition: var(--speed) all ease-in-out;
+}
+
+.hover-signup .signup {
+  width: var(--hover-width);
+}
+
+.hover-signup .login {
+  width: var(--other-width);
+}
+
+.hover-signup .login:before {
+  z-index: 2;
+}
+
+
+.hover-login .login {
+  width: var(--hover-width);
+}
+
+.hover-login .signup {
+  width: var(--other-width);
+}
+
+.hover-login .signup:before {
+  z-index: 2;
+}
+
+@media(max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .button {
+    width: 12rem;
+  }
+}
+
+@media(max-height: 700px) {
+  .button {
+    top: 70%;
+  }
+}
+
+.popup{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+#popup-signup{
+  display: none;
+}
+#popup-login{
+  display: none;
+}
+
+.popup-content{
+  width: 15%;
+   height: 30%;
+   background-color: white;
+   text-align: center;
+   border-radius: 4px;
+   position: relative;
+   padding: 7%;
+ }
+
+.closebtn{
+  position: absolute;
+  top: 0;
+  right: 4px;
+  font-size: 42px;
+  color: black;
+  background-color: Transparent;
+  text-decoration: none;
+  border-color: white;
+}
+
+
+.avatar{
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+
+}
+
+h2{
+  margin: 0;
+  padding: 0 0 3%;
+  text-align: 22px;
+}
+
+.popup-content input{
+  width: 100%;
+  margin-bottom: 2px;
+}
+
+.popup-content input[type="text"], input[type="password"]{
+  border: none;
+  border-bottom: 1px solid grey;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: black;
+  font-size: 16px;
+}
+
+.popup-content input[type="submit"]{
+  border: none;
+  outline: none;
+  height: 40px;
+  background: black;
+  color: white;
+  font-size: 18px;
+  border-radius: 20px;
+  margin-top: 15%;
+}
+
+#popup-login .popup-content input[type="submit"]:hover{
+  cursor: pointer;
+  background: var(--login-bg-color);
+}
+
+#popup-signup .popup-content input[type="submit"]:hover{
+  cursor: pointer;
+  background: var(--signup-bg-color);
+
+}
